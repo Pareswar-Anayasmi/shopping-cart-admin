@@ -1,0 +1,7 @@
+* text=auto
+
+* linguist-vendored
+*.ts linguist-vendored=false
+
+#########################################################################
+#*.component.html     diff=typescript
