@@ -7,7 +7,7 @@ export const routes: Routes = [
   { path: '', title: 'Shopzo - Login', component: LoginComponent },
   {
     path: 'orders',
-    title: 'Orders',
+    title: 'Admin - Orders',
     component: OrderDetailsComponent,
   },
 ];

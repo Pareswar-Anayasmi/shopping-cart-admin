@@ -126,8 +126,8 @@ import { Router } from '@angular/router';
       opacity: 0.9;
     }
 
-    button:nth-child(1) { background-color: #28a745; }
-    button:nth-child(2) { background-color:rgb(230, 137, 17); }
+    button:nth-child(1) { background-color:rgb(163, 168, 165); }
+    button:nth-child(2) { background-color:rgb(240, 202, 99); }
     button:nth-child(3) { background-color: #dc3545; }
 
     .light button {
@@ -237,10 +237,10 @@ import { Router } from '@angular/router';
       }
 
       td:nth-child(1)::before { content: "Order ID"; }
-      td:nth-child(3)::before { content: "Status"; }
-      td:nth-child(4)::before { content: "Total"; }
-      td:nth-child(5)::before { content: "Payment"; }
-      td:nth-child(6)::before { content: "Shipping"; }
+      td:nth-child(2)::before { content: "Status"; }
+      td:nth-child(3)::before { content: "Total"; }
+      td:nth-child(4)::before { content: "Payment"; }
+      td:nth-child(5)::before { content: "Shipping"; }
 
       td.actions {
         flex-direction: column;

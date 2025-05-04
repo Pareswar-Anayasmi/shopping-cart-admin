@@ -11,7 +11,7 @@ import { ShoppingCartLocalStorageService } from '../../services/shopping-cart-lo
 
 @Component({
   selector: 'app-header',
-  imports: [FontAwesomeModule, RouterLink, RouterLinkActive],
+  imports: [FontAwesomeModule, RouterLink],
   template: `
     <header
       class="w-full py-4 top-0 fixed bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-90 z-50 border-b border-b-base-300"
@@ -102,7 +102,7 @@ import { ShoppingCartLocalStorageService } from '../../services/shopping-cart-lo
             class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 z-[1]"
           >
             <!-- <li><a routerLink="/profile">Profile</a></li> -->
-            <li><a routerLink="/orders">Orders</a></li>
+            <!-- <li><a routerLink="/orders">Orders</a></li> -->
             <li><a (click)="logout()">Logout</a></li>
           </ul>
         </div>
@@ -135,105 +135,7 @@ import { ShoppingCartLocalStorageService } from '../../services/shopping-cart-lo
             </label>
 
         </div>
-        <div class="block lg:hidden dropdown dropdown-end">
-          <div tabindex="0" role="button" class="btn m-1">
-            <fa-icon [icon]="faHamburger"></fa-icon>
-          </div>
-          <ul
-            tabindex="0"
-            class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-          >
-            <li>
-              <a
-                routerLink="/home"
-                routerLinkActive="active-link"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="hover:underline transition-all"
-                >All</a
-              >
-            </li>
-            <li>
-              <a
-                routerLink="/men-clothing"
-                routerLinkActive="active-link"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="hover:underline transition-all"
-                >Men</a
-              >
-            </li>
-            <li>
-              <a
-                routerLink="/women-clothing"
-                routerLinkActive="active-link"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="hover:underline transition-all"
-                >Women</a
-              >
-            </li>
-            <li>
-              <a
-                routerLink="/jewelry"
-                routerLinkActive="active-link"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="hover:underline transition-all"
-                >Jewelry</a
-              >
-            </li>
-            <li>
-              <a
-                routerLink="/electronics"
-                routerLinkActive="active-link"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="hover:underline transition-all"
-                >Electronics</a
-              >
-            </li>
-            <li>
-              <a
-                routerLink="/favorite-items"
-                routerLinkActive="bg-primary"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="hover:underline transition-all"
-                >Favorite</a
-              >
-            </li>
-            <li>
-              <a
-                routerLink="/shopping-cart"
-                routerLinkActive="bg-primary"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="relative hover:underline transition-all"
-                >Shopping Cart @if (cartItemQuantity() >= 1) {
-                <div
-                  class="absolute -top-2 -right-2 badge badge-primary badge-sm"
-                >
-                  {{ cartItemQuantity() }}
-                </div>
-                }
-              </a>
-            </li>
-
-            <li>
-              <a routerLink="/orders"
-                routerLinkActive="bg-primary"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="relative hover:underline transition-all"
-                >Orders
-              </a>
-            </li>
-
-
-            <li>
-              <a
-              (click)="logout()"
-                routerLinkActive="bg-primary"
-                [routerLinkActiveOptions]="{ exact: true }"
-                class="relative hover:underline transition-all"
-                >Logout
-              </a>
-            </li>
-          </ul>
-        </div>
+       
       </div>
     </header>
   `,
