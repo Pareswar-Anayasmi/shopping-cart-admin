@@ -337,7 +337,7 @@ export class OrderDetailsComponent implements OnInit {
   
     this.actioned = action;
   
-    const url = `http://localhost:3000/orders/${order.id}`;
+    const url = `http://localhost:3000/orders/${order.order_id}`;
 
     const body = {
        order_status:action,
